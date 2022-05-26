@@ -89,6 +89,10 @@
     		<groupId>io.quarkus</groupId>
     		<artifactId>quarkus-scheduler</artifactId>
 		</dependency>
+    	<dependency>
+      		<groupId>software.amazon.awssdk</groupId>
+      		<artifactId>sts</artifactId>
+    	</dependency>		
 		
     </dependencies>
 
