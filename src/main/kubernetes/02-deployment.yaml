@@ -23,11 +23,11 @@ spec:
         imagePullPolicy: Always
         resources: {}
         env:
-        - name:
+        - name: QUEUE_URL
           value:
-        - name:
+        - name: AWS_ACCESS_KEY_ID
           value:
-        - name:
+        - name: AWS_SECRET_ACCESS_KEY
           value:
         - name:
           value:
