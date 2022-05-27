@@ -46,23 +46,23 @@ public class QuarksShieldSyncResource {
         
         LOGGER.info(">> MESSAGE QTIDE: " + messages.size());
         
-//        for(Message message : messages) {
-//        	
-//        	//LOGGER.info(">> MESSAGE BODY: " + message.body());
-//        	
-//        	LOGGER.info(">> MESSAGE PREPARANDO PARA SER DELETADA...");
-//        	
-//        	DeleteMessageRequest deleteMessageRequest = DeleteMessageRequest.builder()
-//                    .queueUrl(queueUrl)
-//                    .receiptHandle(message.receiptHandle())
-//                    .build();
-//        	
-//        	LOGGER.info(">> MESSAGE A SER DELETADA: " + message.receiptHandle());
-//        	
-//        	sqs.deleteMessage(deleteMessageRequest);
-//        	
-//        	LOGGER.info(">> MESSAGE DELETADA COM SUCESSO!!!");
-//        }
+        for(Message message : messages) {
+        	
+        	LOGGER.info(">> MESSAGE BODY: " + message.body());
+        	
+        	LOGGER.info(">> MESSAGE PREPARANDO PARA SER DELETADA...");
+        	
+        	DeleteMessageRequest deleteMessageRequest = DeleteMessageRequest.builder()
+                    .queueUrl(queueUrl)
+                    .receiptHandle(message.receiptHandle())
+                    .build();
+        	
+        	LOGGER.info(">> MESSAGE A SER DELETADA: " + message.receiptHandle());
+        	
+        	sqs.deleteMessage(deleteMessageRequest);
+        	
+        	LOGGER.info(">> MESSAGE DELETADA COM SUCESSO!!!");
+        }
         
         LOGGER.info(">> FIM");
     }
